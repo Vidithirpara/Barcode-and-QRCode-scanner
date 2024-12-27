@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llOpenScanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:background="@drawable/rounded_corner_gray2"
+        android:paddingVertical="@dimen/_10sdp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_10sdp">
+
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/scanner"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan code now"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            style="@style/poppinsMediumText"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

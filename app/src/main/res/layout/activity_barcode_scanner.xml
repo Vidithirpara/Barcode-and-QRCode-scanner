@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D8DEEF"
+    tools:context=".BarcodeScannerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_12sdp">
+
+        <ImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/back_arrow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Code Scanner"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            style="@style/poppinsMediumText"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan your code here"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            style="@style/poppinsMediumText"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            app:cardCornerRadius="@dimen/_20sdp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <SurfaceView
+                    android:id="@+id/cameraSurfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"/>
+
+                <View
+                    android:id="@+id/barcode_line"
+                    android:layout_width="@dimen/_230sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="#1E42AE"
+                    android:layout_gravity="center_horizontal"/>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set your code into frame"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            style="@style/poppinsMediumText"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>
